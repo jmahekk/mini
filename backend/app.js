@@ -10,11 +10,13 @@ dotenv.config({path: "./config/config.env"});
 
 app.use
 (cors({
-    origin:"https://mini-murex-ten.vercel.app/",
+    origin:"*",
     methods:["POST"],
     credentials: true
 })
 );
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
